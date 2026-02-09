@@ -1,0 +1,107 @@
+<vlaentine.html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Valentine's Day ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+    text-align: center;
+}
+
+.container {
+    margin-top: 80px;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+p {
+    font-size: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.heart {
+    font-size: 60px;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1);}
+    50% { transform: scale(1.2);}
+    100% { transform: scale(1);}
+}
+
+button {
+    margin: 20px;
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#yes {
+    background-color: #ff3b6f;
+    color: white;
+}
+
+#no {
+    background-color: white;
+    color: #ff3b6f;
+    position: absolute;
+}
+
+.hidden {
+    display: none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="heart">❤️</div>
+
+    <h1>Happy Valentine's Day</h1>
+
+    <p>
+        Чамтай танилцсан цагаас хойш миний амьдрал илүү утгатай болсон.  
+        Чи миний хамгийн үнэ цэнтэй хүн ❤️
+    </p>
+
+    <h2>Чи миний Valentine хэвээр байх уу?</h2>
+
+    <button id="yes">YES 💍</button>
+    <button id="no">NO 🙈</button>
+
+    <h2 id="result" class="hidden">Yayyy ❤️ Би чамд маш их хайртай!</h2>
+</div>
+
+<script>
+const yesBtn = document.getElementById("yes");
+const noBtn = document.getElementById("no");
+const result = document.getElementById("result");
+
+yesBtn.onclick = function() {
+    result.classList.remove("hidden");
+}
+
+noBtn.onmouseover = function() {
+    const x = Math.random() * window.innerWidth;
+    const y = Math.random() * window.innerHeight;
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
